@@ -43,13 +43,44 @@ Implementa una función __montañaAsteriscos(int $n, $m): void__ que imprima una
 
     ```php
 
+    <?php
+    function montaniaAsteriscos(int $n, int $m): array {
+    $resultado = [];
 
+    for ($i = 1; $i <= $n; $i++) {
+        $line = "";
+        $spaces = str_repeat(" ", $n - $i);
+        $stars  = str_repeat("*", $i);
+
+        for ($j = 0; $j < $m; $j++) {
+            if ($j % 2 != 0) {
+                // alineado a la derecha
+                $line .= $spaces . $stars;
+            } else {
+                //  alineado a la izquierda
+                $line .= $stars . $spaces;
+            }
+        }
+
+        $resultado[] = $line;
+    }
+
+    return $resultado;
+    }
+    
+    $montanias = montaniaAsteriscos(4, 4);
+    
+    echo "<pre>" . implode("\n", $montanias) . "</pre>";
+    ?>
     ```
 
     Salida:
 
     ```
-
+    *      *
+    **    **
+    ***  ***
+    ********
     ```
 
 ## Suma de dígitos
