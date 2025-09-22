@@ -54,10 +54,8 @@ Implementa una función __montañaAsteriscos(int $n, $m): void__ que imprima una
 
         for ($j = 0; $j < $m; $j++) {
             if ($j % 2 != 0) {
-                // alineado a la derecha
                 $line .= $spaces . $stars;
             } else {
-                //  alineado a la izquierda
                 $line .= $stars . $spaces;
             }
         }
