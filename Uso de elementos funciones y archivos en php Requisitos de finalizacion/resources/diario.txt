@@ -1,0 +1,2 @@
+[2025-09-24 18:21:10] Hoy aprendi PHP con ficheros :D 
+[2025-09-24 18:22:24] Hola mundo, soy un programador 
